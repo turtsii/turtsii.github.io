@@ -1,0 +1,125 @@
+* {
+    font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    background-color: #1a1a24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+.terminal-window {
+    width: 100%;
+    max-width: 850px;
+    height: 600px;
+    background-color: #0d0d13;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    border: 1px solid #2d2d3d;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background-color: #1e1e2f;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+    border-bottom: 1px solid #2d2d3d;
+    flex-shrink: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.header-title {
+    color: #8e8ea7;
+    font-size: 13px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.terminal-body {
+    padding: 25px;
+    color: #33ff33;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+#typewriter h1 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 4px 0;
+}
+
+#typewriter h2 {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+}
+#typewriter p {
+    margin: 0 0 12px 0;
+}
+
+#typewriter a.terminal-link {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+#typewriter a.terminal-link-dev {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 2px;
+}
+#typewriter a.terminal-link:hover {
+    color: #ffffff;
+    background-color: #00bfff;
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+#typewriter a.terminal-link-dev:hover {
+    color: #FF0000;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+.active-cursor::after {
+    content: "█";
+    color: #ffffff;
+    animation: cursor-flash 0.8s infinite;
+    display: inline; 
+    margin-left: 2px;
+}
+
+@keyframes cursor-flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
